@@ -6,7 +6,7 @@ from mpl_toolkits.mplot3d import Axes3D
 a = 0.082e-6
 L = 0.5
 N = 100
-T = 360000
+T = 36000
 h = 150
 alpha = 11
 beta = 30
@@ -20,6 +20,8 @@ u = np.zeros((M+1, N+1))
 u[:, 0] = alpha
 u[:, N] = beta
 u[0, 1:N] = 0
+
+u[48, 52] = 30
 
 def derivatives(u_t):
     du_dt = np.zeros(N+1)
